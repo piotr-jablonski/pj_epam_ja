@@ -107,11 +107,12 @@ public class Main {
 	
 	public void start() {
 		Main main = new Main();
-		main.checkBoard();
+		System.out.println("Please write in an coordinates");
 		Scanner scanner = new Scanner(System.in);
 		int a = scanner.nextInt();
 		int b = scanner.nextInt();
 		board[a][b] = currentPlayer;
+		main.checkBoard();
 		main.ifFinish();
 		main.changePlayer();
 		scanner.close();
