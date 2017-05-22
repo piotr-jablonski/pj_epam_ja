@@ -4,15 +4,21 @@ import java.util.Scanner;
 
 public class Game {
 	
-	Scanner scanner = new Scanner(System.in);
-	
-	
-	
-	
-	
-	public String [][] array = new String [3][3];
-	
-	
-	
+	static void main (String[]args) {
+		
+		Main main = new Main();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		}
+	}
 
-}
+	
+	
+	
