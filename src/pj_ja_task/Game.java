@@ -1,23 +1,31 @@
 package pj_ja_task;
 
-import java.util.Scanner;
-
 public class Game {
 	
-	static void main (String[]args) {
-		
+public static void main (String[]args) {
+	
 		Main main = new Main();
+		System.out.println("Let's start the game");
+		main.checkBoard();
 		
-		
-		
-		
-		
-		
-		
-		
-		
+		while(true) {
+			main.start();
 		}
+		
 	}
+}
+		
+		
+		
+		
+		
+		
+		
+		
+	
+		
+		
+	
 
 	
 	

@@ -1,11 +1,10 @@
 package pj_ja_task;
-
 import java.util.Scanner;
 
 public class Main {
 
 	public char[][] board;
-	public char currentPlayer;
+	public char currentPlayer = 'x';
 	public boolean finish = false;
 
 	public Main() {
@@ -15,89 +14,108 @@ public class Main {
 	}
 	
 	public void checkBoard() {
-		if (board[0].equals('x') || board[1].equals('x') || board[2].equals('x')) {
+		if (board[0][0]=='x' || board[0][1]=='x' || board[0][2]=='x') {
 			System.out.println("x has won");
-		finish = true;}
-		if (board[3].equals('x') || board[4].equals('x') || board[5].equals('x')) {
+			finish = true;
+		}
+		if (board[1][0]=='x' || board[1][1]=='x' || board[1][2]=='x') {
 			System.out.println("x has won");
-		finish = true;}
-		if (board[6].equals('x') || board[7].equals('x') || board[8].equals('x')) {
+			finish = true;
+		}
+		if (board[2][0]=='x' || board[2][1]=='x' || board[2][2]=='x') {
 			System.out.println("x has won");
-		finish = true;}
-		if (board[0].equals('x') || board[3].equals('x') || board[6].equals('x')) {
+			finish = true;
+		}
+		if (board[0][0]=='x' || board[1][0]=='x' || board[2][0]=='x') {
 			System.out.println("x has won");
-		finish = true;}
-		if (board[1].equals('x') || board[4].equals('x') || board[7].equals('x')) {
+			finish = true;
+		}
+		if (board[0][1]=='x' || board[1][1]=='x' || board[2][1]=='x') {
 			System.out.println("x has won");
-		finish = true;}
-		if (board[2].equals('x') || board[5].equals('x') || board[8].equals('x')) {
+			finish = true;
+		}
+		if (board[0][2]=='x' || board[1][2]=='x' || board[2][2]=='x') {
 			System.out.println("x has won");
-		finish = true;}
-		if (board[0].equals('x') || board[4].equals('x') || board[8].equals('x')) {
+			finish = true;
+		}
+		if (board[0][0]=='x' || board[1][1]=='x' || board[2][2]=='x') {
 			System.out.println("x has won");
-		finish = true;}
-		if (board[2].equals('x') || board[4].equals('x') || board[6].equals('x')) {
+			finish = true;
+		}
+		if (board[0][2]=='x' || board[1][1]=='x' || board[2][0]=='x') {
 			System.out.println("x has won");
-		finish = true;}
-			
+			finish = true;
+		}
 		
-		if (board[0].equals('o') || board[1].equals('o') || board[2].equals('o')) {
+		
+		
+		
+		if (board[0][0]=='o' || board[0][1]=='o' || board[0][2]=='o') {
 			System.out.println("o has won");
-			finish = true;}
-		if (board[3].equals('o') || board[4].equals('o') || board[5].equals('o')) {
+			finish = true;
+		}
+		if (board[1][0]=='o' || board[1][1]=='o' || board[1][2]=='o') {
 			System.out.println("o has won");
-			finish = true;}
-		if (board[6].equals('o') || board[7].equals('o') || board[8].equals('o')) {
+			finish = true;
+		}
+		if (board[2][0]=='o' || board[2][1]=='o' || board[2][2]=='o') {
 			System.out.println("o has won");
-			finish = true;}
-		if (board[0].equals('o') || board[3].equals('o') || board[6].equals('o')) {
+			finish = true;
+		}
+		if (board[0][0]=='o' || board[1][0]=='o' || board[2][0]=='o') {
 			System.out.println("o has won");
-			finish = true;}
-		if (board[1].equals('o') || board[4].equals('o') || board[7].equals('o')) {
+			finish = true;
+		}
+		if (board[0][1]=='o' || board[1][1]=='o' || board[2][1]=='o') {
 			System.out.println("o has won");
-			finish = true;}
-		if (board[2].equals('o') || board[5].equals('o') || board[8].equals('o')) {
+			finish = true;
+		}
+		if (board[0][2]=='o' || board[1][2]=='o' || board[2][2]=='o') {
 			System.out.println("o has won");
-			finish = true;}
-		if (board[0].equals('o') || board[4].equals('o') || board[8].equals('o')) {
+			finish = true;
+		}
+		if (board[0][0]=='o' || board[1][1]=='o' || board[2][2]=='o') {
 			System.out.println("o has won");
-			finish = true;}
-		if (board[2].equals('o') || board[4].equals('o') || board[6].equals('o')) {
+			finish = true;
+		}
+		if (board[0][2]=='o' || board[1][1]=='o' || board[2][0]=='o') {
 			System.out.println("o has won");
-			finish = true;}
+			finish = true;
+		}
+		
+		
+		
 	}
+
 	
 	public boolean ifFinish() {
 		checkBoard();
 		if (finish) {
+			System.out.println("THE END");
 			return true;
 		}
 		return false;
 	}
-	
-	public void start() {
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Please write in an index of field. (First is 0)");
-		
-		while(finish=false) {
-			int a = scanner.nextInt();
-			board[a] = currentPlayer;
-			change
-		
-	}
-		
-		public void changePlayer() {
-			if (CurrentPlayer=='x') {
-				currentPlayer='o'
-			}
+
+	public void changePlayer() {
+		if (currentPlayer == 'x') {
+			currentPlayer = 'o';
+		} else {
+			currentPlayer = 'x';
 		}
 	}
 	
+	public void start() {
+		Main main = new Main();
+		main.checkBoard();
+		Scanner scanner = new Scanner(System.in);
+		int a = scanner.nextInt();
+		int b = scanner.nextInt();
+		board[a][b] = currentPlayer;
+		main.ifFinish();
+		main.changePlayer();
+		scanner.close();
+	}	
 }
-
-
-
-
-
 
 
